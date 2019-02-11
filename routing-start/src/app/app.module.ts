@@ -15,10 +15,13 @@ import { ServersService } from './servers/servers.service';
 
 const appRoutes:Routes=[
   {path:'',component:HomeComponent},
-  {path:'servers',component:ServersComponent},
-  {path:'users',component:UsersComponent},
-  {path:'users/:id',component:UserComponent}
-
+  {path:'servers',component:ServersComponent,children:[
+        {path:':id',component:ServerComponent},
+      {path:':id/edit',component:EditServerComponent}
+    ]},
+  {path:'users',component:UsersComponent,children:[
+      {path:':id/:name',component:UserComponent}
+    ]},
 ]
 
 @NgModule({
