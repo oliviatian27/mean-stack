@@ -1,19 +1,19 @@
 <nav class="navbar navbar-default">
   <div class="conntainer-fluid">
     <div class="navbar-header">
-      <a href="#" class="navbar-brand"> recipe book</a>
+      <a routerLink="/" class="navbar-brand"> recipe book</a>
     </div>
     <div class="navbar-default">
       <ul class="nav navbar-nav">
-        <li><a href="#" (click)="onSelect('recipe')">recipes</a></li>
-        <li><a href="#" (click)="onSelect('list')">shopping list</a></li>
+        <li routerLinkActive="active"><a routerLink="/recipes">recipes</a></li>
+        <li routerLinkActive="active"><a routerLink="/shopping-list">shopping list</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown" appDropdown>
-          <a href="#" class="dropdown-toggle" role="button">manage <span class="caret"></span></a>
+          <a class="dropdown-toggle" role="button" style="cursor:pointer;">manage <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">save data</a></li>
-            <li><a href="#">fetch data</a></li>
+            <li><a style="cursor:pointer;">save data</a></li>
+            <li><a style="cursor:pointer;">fetch data</a></li>
           </ul>
         </li>
       </ul>
