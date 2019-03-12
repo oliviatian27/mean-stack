@@ -25,24 +25,24 @@ export class HomeComponent implements OnInit,OnDestroy {
       (number:number)=>{
         console.log(number)
       }
-    )
+    );
     const myObservable = Observable.create((observer:Observer<string>)=>{
       setTimeout(()=>{
         observer.next('first package')
-      },2000)
+      },2000);
       setTimeout(()=>{
         observer.next('second package')
-      },4000)
+      },4000);
       setTimeout(()=>{
         observer.complete()
-      },5000)
+      },5000);
       setTimeout(()=>{
         observer.next('third package')
-      },6000)
+      },6000);
       setTimeout(()=>{
         observer.error('dosnt work')
       },7000)
-    })
+    });
 
     this.customObsSubsribtion=myObservable.subscribe(
       (data:string)=>{
