@@ -8,6 +8,7 @@ import {HttpResponse} from "@angular/common/http";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  appName=this.serverService.getAppName();
   servers = [
     {
       name: 'Testserver',
